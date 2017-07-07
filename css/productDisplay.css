@@ -1,0 +1,18 @@
+
+
+.browseWrapper {
+	border: 5px solid #838386;
+
+	background: #e6e6fa;
+    height: 23vw;
+	
+	
+}
+.browse-wrapper p{
+	float: left;
+
+}
+
+.browse-wrapper img {
+	height: 8vw;
+}
