@@ -16,6 +16,11 @@
 
 	Admin username: torab
 	Admin password: admin
+	
+	User username: user
+	User password: user
 
+	Delivery Man: delivery
+	Delivery Man Password: delivery
 	And you are ready to run this project in your machine.
 
