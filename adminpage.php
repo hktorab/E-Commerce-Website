@@ -35,14 +35,14 @@ if (!(($_SESSION['user'])==1)) {
 						</li>			
 					</ul>
 				</div>
-				<div class="header-right">
+				<!-- <div class="header-right">
 					<div class="cart box_1">
-						<a href="logout.php">Logout</a>
+						<a style="color: white" href="logout.php">Logout</a>
 
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				<div class="clearfix"> </div>
+				<div class="clearfix"> </div> -->
 			</div>
 		</div>
 	</div>

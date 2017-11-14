@@ -1,5 +1,6 @@
 <?php 
 include 'db.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -8,27 +9,27 @@ include 'db.php';
 	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
 	<style type="text/css">
-		
-		.formCss{width: 100%;
-			border: 1px solid #ccc;
-			background: #FFF;
-			margin: 0 0 5px;
-			padding: 10px;
-			font-style: normal;
-			font-variant-ligatures: normal;
-			font-variant-caps: normal;
-			font-variant-numeric: normal;
-			font-weight: 400;
-			font-stretch: normal;
-			font-size: 12px;
-			line-height: 16px;
-			font-family: Roboto, Helvetica, Arial, sans-serif;
-			
-		}
-	</style>
+
+	.formCss{width: 100%;
+		border: 1px solid #ccc;
+		background: #FFF;
+		margin: 0 0 5px;
+		padding: 10px;
+		font-style: normal;
+		font-variant-ligatures: normal;
+		font-variant-caps: normal;
+		font-variant-numeric: normal;
+		font-weight: 400;
+		font-stretch: normal;
+		font-size: 12px;
+		line-height: 16px;
+		font-family: Roboto, Helvetica, Arial, sans-serif;
+
+	}
+</style>
 </head>
 <body style="    background-color: #d6d1d1;">
-	
+	<?php include 'header.php'; ?>
 	<div class="container">  
 		<form id="contact" action="AddDelivaryMan.php" method="post" enctype="multipart/form-data">
 			<h2  style="text-align: center;"><b>Info of delivary Man</b></h2>
@@ -162,7 +163,7 @@ if (isset($_POST['submit'])) {
 			$sql="insert into user( userID,Fname, Lname,username,password,Phone,Email,Address,Account_type,Image) values('',?,?,?,?,?,?,?,202,?);";
 
 			if (($stmt=$conn->prepare($sql))
-				) {
+		) {
 				$stmt->bind_param("ssssssss",$Fname,$Lname,$username,$password,$phone,$email,$address,$image);
 
 			# code...
@@ -231,7 +232,7 @@ class DeliverymanEntry
 		$sql_query="insert into deliveryman( delivaryman_id,status,location,userID) values('',?,?,?);";
 
 		if (($stmtt=$conn->prepare($sql_query))
-			) {
+	) {
 
 			$stmtt->bind_param("sss",$status,$location,$userID);
 

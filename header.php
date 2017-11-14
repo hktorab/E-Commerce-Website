@@ -1,10 +1,11 @@
 <?php 
 if (!session_id()) {
-# code...
 	session_start();
 } 
-
 include 'db.php';
+if (empty($_SESSION['user'])) {
+//	header('Location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +36,17 @@ include 'db.php';
 							$row=$res->fetch_object();
 
 							echo "
-							<li><a href='customerPanel.php'><span class='glyphicon glyphicon-user'> </span>". $row->Fname." ".$row->Lname."</a></li>
 							
+							<li><a href='customerPanel.php'><span class='glyphicon glyphicon-user'> </span>". $row->Fname." ".$row->Lname."</a></li>
+							<li>
+							<div class='header-right'>
+							<div class='cart box_1'>
+							<a style='color: white' href='logout.php'>Logout</a>
+							<div class='clearfix'> </div>
+							</div>
+							</div>
+							
+							</li>
 							";
 						} 
 						?>

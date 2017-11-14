@@ -64,7 +64,7 @@ include 'db.php';
 				
 				<div class="header-right">
 					<div class="cart box_1">
-						<a href="logout.php">Logout</a>
+						<a style="color: white" href="logout.php">Logout</a>
 
 						<div class="clearfix"> </div>
 					</div>

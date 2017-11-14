@@ -62,7 +62,7 @@ include 'db.php';
 					</ul>
 				</div>
 				
-				<li style="text-align: right;" ><a href="logout.php"><span class='glyphicon glyphicon-user'> </span > Logout </a></li>
+				<li style="text-align: right;" ><a   style=" color: white"; href="logout.php"><span  class='glyphicon glyphicon-user'> </span > Logout </a></li>
 
 
 				

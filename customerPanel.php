@@ -29,24 +29,16 @@ include 'db.php';
 			<div class="container">
 				<div class="header-top-left">
 					<ul>
-						<li style="color: white">
-							Welcome to Myshop
-						</li>
-						<li  >
-
-
-							<a href="checkout.php"> <img src="images/bag.png" alt=""></a>	
-							
-						</li>	
-						<li><a  style="color: #be76e2" href="PreviousPurseRecord.php" > My Previous purchases
+						<li><a  style="color: white" href="PreviousPurseRecord.php" > My Previous purchases
 						</a></li>		
 					</ul>
 				</div>
 				<div class="header-right">
 					<div class="cart box_1">
-						<a href="logout.php">Logout</a>
+						<p style="color: white;margin-right: .3vw">Cart</p>
+						<a href="checkout.php"> <img src="images/bag.png" alt=""> </a>
 
-						
+						<a style="color: white;margin-left: 3vw" href="logout.php">Logout</a>
 						
 					</div>
 				</div>
@@ -61,7 +53,7 @@ include 'db.php';
 	
 	<?php
 	include 'productDisplay.php';
-
+	include 'footer.php';
 	?>
 </body>
 

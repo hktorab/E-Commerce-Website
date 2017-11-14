@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2017 at 05:57 PM
+-- Generation Time: Nov 14, 2017 at 08:09 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -35,6 +35,13 @@ CREATE TABLE `buy` (
   `deliveredBy` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `buy`
+--
+
+INSERT INTO `buy` (`id`, `userId`, `products`, `isDelivered`, `deliverDate`, `deliveredBy`) VALUES
+(1, '2', '1113', 'yes', '14/11/2017', '4');
+
 -- --------------------------------------------------------
 
 --
@@ -53,7 +60,7 @@ CREATE TABLE `deliveryman` (
 --
 
 INSERT INTO `deliveryman` (`delivaryman_id`, `status`, `location`, `userID`) VALUES
-(0, 'active', 'uttara', 9);
+(0, 'active', 'uttara', 4);
 
 -- --------------------------------------------------------
 
@@ -108,7 +115,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userID`, `Fname`, `Lname`, `username`, `password`, `Phone`, `Email`, `Address`, `Image`, `Account_type`) VALUES
-(1, 'Humayun', 'Kabir', 'torab', '1', '12', 'humayunkabirtorab@gmail.com', 'Dhaka', 'admin.png', 101);
+(1, 'Humayun', 'Kabir', 'admin', 'admin', '12', 'humayunkabirtorab@gmail.com', 'Dhaka', 'admin.png', 101),
+(2, 'Mr.', 'User', 'user', 'user', '1', 'asd@gmail.com', 'uttara', 'user.png', 303),
+(4, 'mr', 'delivery', 'delivery', 'delivery', '11', '12@gmailcom', 'uttara', 'delivery.png', 202);
 
 --
 -- Indexes for dumped tables
@@ -146,7 +155,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `buy`
 --
 ALTER TABLE `buy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `product`
 --
@@ -156,7 +165,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
